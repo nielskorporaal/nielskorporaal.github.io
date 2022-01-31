@@ -10,15 +10,17 @@
 	<body class="is-preload">
 
 		<!-- Header -->
-			<section id="header">
+			<section id="header" class='main special'>
 				<header class="major">
-					<h1>Mijn Portfolio</h1>
-					<p>Welkom op mijn persoonlijke pagina</a></p>
+					<div class="content">
+						<br><br><br><br><br><br>
+						<h1>Mijn Portfolio</h1>
+						<p>Welkom op mijn persoonlijke pagina</a></p>
+					</div>
 				</header>	
-				<div class="container">
-					<ul class="actions special">
-						<li><a href="#one" class="button primary scrolly">Klik hier</a></li>
-					</ul>
+					<div class="content">
+						<a href="#one" class="goto-next scrolly">Next</a>
+					</div>
 				</div>
 			</section>
 
@@ -89,11 +91,28 @@
 		<!-- Three -->
 			<section id="three" class="main special">
 				<div class="container">
-					<!-- <span class="image fit primary"><img src="images/hands.jpg" alt="" /></span> -->
 					<div class="content">
 						<header class="major">
 							<h2>Nog een ding</h2>
 						</header>
+
+				<svg class="ap" viewBox="0 0 128 256" width="128px" height="256px" xmlns="http://www.w3.org/2000/svg">
+					<defs>
+						<linearGradient id="ap-grad1" x1="0" y1="0" x2="0" y2="1">
+							<stop offset="0%" stop-color="hsl(223,90%,55%)" />
+							<stop offset="100%" stop-color="hsl(253,90%,55%)" />
+						</linearGradient>
+						<linearGradient id="ap-grad2" x1="0" y1="0" x2="0" y2="1">
+							<stop offset="0%" stop-color="hsl(193,90%,55%)" />
+							<stop offset="50%" stop-color="hsl(223,90%,55%)" />
+							<stop offset="100%" stop-color="hsl(253,90%,55%)" />
+						</linearGradient>
+					</defs>
+					<circle class="ap__ring" r="56" cx="64" cy="192" fill="none" stroke="#ddd" stroke-width="16" stroke-linecap="round" />
+					<circle class="ap__worm1" r="56" cx="64" cy="192" fill="none" stroke="url(#ap-grad1)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 263.89" />
+					<path class="ap__worm2" d="M120,192A56,56,0,0,1,8,192C8,161.07,16,8,64,8S120,161.07,120,192Z" fill="none" stroke="url(#ap-grad2)" stroke-width="16" stroke-linecap="round" stroke-dasharray="87.96 494" />
+				</svg>
+
 						<p>Deze website is continue in ontwikkeling. Kom daarom regelmatig terug en check voor updates! Wilt u notificaties ontvangen? Klik dan <a href='mailto:napkorporaal@icloud.com?Subject=Niels, ik wil graag updates ontvangen&body=Mijn email-adres is '>hier</a>!</p>
 					</div>
 					<a href="#footer" class="goto-next scrolly">Next</a>
@@ -106,13 +125,13 @@
 					<header class="major">
 						<h2>Ervaar contact</h2>
 					</header>	
-					<A HREF="mailto:napkorporaal@icloud.com?Subject=Niels, ik neem graag contact met je op"><input type="submit" value="E-Mail" class="primary" /></A>		
+					<A HREF="mailto:napkorporaal@icloud.com?Subject=Niels, ik neem graag contact met je op"><input type="submit" value="E-Mail" class="primary scrolly"></A>		
 				</div>
 				<footer>	
 					<ul class="icons">
 						
-						<li><a href="https://www.linkedin.com/in/niels-korporaal-7a0b42165/" class="icon brands alt fa-linkedin"><span class="label">Dribbble</span></a></li>
-						<li><a href="https://github.com/codevillain679" class="icon brands alt fa-github"><span class="label">Email</span></a></li>
+						<li><a href="https://www.linkedin.com/in/niels-korporaal-7a0b42165/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/codevillain679" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 					</ul>
 				</footer>
 			</section>
