@@ -3309,7 +3309,7 @@ button:disabled,
   background: black;
   animation: typewriter var(--typewriter-speed-slower) steps(58)
       var(--typewriter-speed) forwards,
-    blink 800ms steps(42) infinite;
+    blink 800ms steps(58) infinite;
 }
 @keyframes typewriter {
   to {
