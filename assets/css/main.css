@@ -3261,15 +3261,18 @@ button:disabled,
   max-width: max-content;
 }
 
-.typewriter-content {
+.typewriter-content-42,
+.typewriter-content-58 {
   font-size: 17px;
   font-family: "Source Code Pro", monospace;
   position: relative;
   max-width: max-content;
 }
 
-.typewriter-content::before,
-.typewriter-content::after {
+.typewriter-content-42::before,
+.typewriter-content-42::after,
+.typewriter-content-58::before,
+.typewriter-content-58::after {
   content: "";
   position: absolute;
   top: 0;
@@ -3280,21 +3283,34 @@ button:disabled,
 
 :root {
   --bg-color: #313a3d;
-  --typewriter-speed: 8s;
+  --typewriter-speed: 4.2s;
+  --typewriter-speed-slower: 5.8s;
 }
 
-.typewriter-content::before {
+.typewriter-content-42::before {
   background: var(--bg-color);
-  animation: typewriter var(--typewriter-speed) steps(42) 1s forwards;
+  animation: typewriter var(--typewriter-speed) steps(42) forwards;
 }
 
-.typewriter-content::after {
+.typewriter-content-58::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriter-speed-slower) steps(58)
+    var(--typewriter-speed) forwards;
+}
+
+.typewriter-content-42::after {
   width: 0.1em;
   background: black;
-  animation: typewriter var(--typewriter-speed) steps(42) 1s forwards,
+  animation: typewriter var(--typewriter-speed) steps(42) forwards,
     blink 800ms steps(42) infinite;
 }
-
+.typewriter-content-58::after {
+  width: 0.1em;
+  background: black;
+  animation: typewriter var(--typewriter-speed-slower) steps(58)
+      var(--typewriter-speed) forwards,
+    blink 800ms steps(42) infinite;
+}
 @keyframes typewriter {
   to {
     left: 100%;
