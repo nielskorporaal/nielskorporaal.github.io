@@ -3265,7 +3265,7 @@ button:disabled,
   font-size: 17px;
   font-family: "Source Code Pro", monospace;
   position: relative;
-  max-width: 70%;
+  max-width: max-content;
 }
 
 .typewriter-content::before,
