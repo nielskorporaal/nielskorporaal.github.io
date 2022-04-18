@@ -174,11 +174,6 @@ html {
 
 html {
   background-color: #313a3d;
-  background-attachment: fixed, fixed;
-  /* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
-  background-position: top left, center center;
-  background-repeat: repeat, none;
-  background-size: auto, cover;
   animation: coffee 33s ease forwards;
 }
 
@@ -214,7 +209,7 @@ select,
 textarea {
   color: #6f7577;
   font-family: "Raleway", "Helvetica", sans-serif;
-  font-size: 15pt;
+  font-size: 12pt;
   font-weight: 400;
   line-height: 1.75em;
 }
@@ -2860,9 +2855,7 @@ button:disabled,
 }
 
 .main .container:before {
-  /* min-height: calc(100vh - 13em); */
   content: "";
-  /* display: inline-block; */
   vertical-align: middle;
   width: 1px;
 }
@@ -2920,7 +2913,6 @@ button:disabled,
 #header header {
   color: rgba(255, 255, 255, 0.5);
   display: inline-block;
-  padding-bottom: 8em;
   vertical-align: middle;
 }
 
@@ -2932,7 +2924,7 @@ button:disabled,
 #header header h6,
 #header header strong,
 #header header b {
-  color: #ffffff;
+  color: white;
 }
 
 #header header a {
@@ -2946,7 +2938,7 @@ button:disabled,
 #header header h1 {
   font-size: 3em;
   line-height: 1.25em;
-  margin: 0;
+  margin: 4em;
 }
 
 #header header h1:after {
@@ -2954,7 +2946,7 @@ button:disabled,
 }
 
 #header header p {
-  color: #ffffff;
+  color: white;
   font-weight: 700;
   margin: 0 auto;
 }
@@ -3039,6 +3031,11 @@ button:disabled,
 }
 
 /* Large */
+@media screen and (min-width: 1680px) {
+  .typewriter-content {
+    max-width: max-content;
+  }
+}
 
 @media screen and (max-width: 1680px) {
   /* Basic */
@@ -3047,7 +3044,10 @@ button:disabled,
   input,
   select,
   textarea {
-    font-size: 12pt;
+    font-size: 11pt;
+  }
+  .typewriter-content {
+    max-width: max-content;
   }
 }
 
@@ -3077,8 +3077,8 @@ button:disabled,
   /* Header */
 
   #header header {
-    padding-bottom: 9em;
-    width: 80%;
+    /* padding: 3em;
+    padding-bottom: 9em; */
   }
 
   #header .container {
@@ -3271,10 +3271,8 @@ button:disabled,
 .typewriter-content {
   font-size: 1.2rem;
   font-family: "Source Code Pro", monospace;
-  box-shadow: hsl(0, 0, 0, 1);
   text-transform: none;
   position: relative;
-  width: max-content;
 }
 
 .typewriter-content::before,
@@ -3313,11 +3311,5 @@ button:disabled,
 @keyframes blink {
   to {
     background: transparent;
-  }
-}
-
-@keyframes coffee {
-  to {
-    /* background-image: url("images/overlay.png"), url("../../images/bg.jpg"); */
   }
 }
