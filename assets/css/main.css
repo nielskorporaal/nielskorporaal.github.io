@@ -200,6 +200,7 @@ html.is-touch #wrapper {
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0);
   height: 100vh;
+  overflow: auto;
 }
 
 body,
@@ -2911,7 +2912,6 @@ button:disabled,
 
 #header header {
   color: rgba(255, 255, 255, 0.5);
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -3156,7 +3156,7 @@ button:disabled,
 
   html,
   body {
-    min-width: 320px;
+    min-width: 280px;
   }
 
   /* List */
