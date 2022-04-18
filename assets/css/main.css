@@ -2898,7 +2898,7 @@ button:disabled,
 /* Header */
 
 #header {
-  height: 100vh;
+  height: 80vh;
   position: relative;
   text-align: center;
 }
@@ -2906,7 +2906,7 @@ button:disabled,
 #header:after {
   content: "";
   display: inline-block;
-  height: 100vh;
+  height: 80vh;
   vertical-align: middle;
 }
 
