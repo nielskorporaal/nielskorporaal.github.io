@@ -200,7 +200,6 @@ html.is-touch #wrapper {
   -webkit-overflow-scrolling: touch;
   -webkit-transform: translate3d(0, 0, 0);
   height: 100vh;
-  overflow: auto;
 }
 
 body,
@@ -243,7 +242,7 @@ i {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin: 0 0 0 0;
 }
 
 h1,
@@ -256,7 +255,7 @@ h6 {
   font-weight: 800;
   letter-spacing: 0.075em;
   line-height: 1em;
-  margin: 0 0 1em 0;
+  margin: 0 0 0 0;
   text-transform: uppercase;
 }
 
@@ -2861,10 +2860,10 @@ button:disabled,
 }
 
 .main .container .content {
-  display: inline-block;
+  /* display: inline-block;
   margin-right: 1px;
   vertical-align: middle;
-  width: calc(100% - 10px);
+  width: calc(100% - 10px); */
 }
 
 .main .goto-next {
@@ -3030,13 +3029,6 @@ button:disabled,
   padding-left: 0;
 }
 
-/* Large */
-@media screen and (min-width: 1680px) {
-  .typewriter-content {
-    max-width: max-content;
-  }
-}
-
 @media screen and (max-width: 1680px) {
   /* Basic */
 
@@ -3045,9 +3037,6 @@ button:disabled,
   select,
   textarea {
     font-size: 11pt;
-  }
-  .typewriter-content {
-    max-width: max-content;
   }
 }
 
@@ -3268,11 +3257,15 @@ button:disabled,
   }
 }
 
+.typewriter-container {
+  max-width: max-content;
+}
+
 .typewriter-content {
-  font-size: 1.2rem;
+  font-size: 17px;
   font-family: "Source Code Pro", monospace;
-  text-transform: none;
   position: relative;
+  max-width: 70%;
 }
 
 .typewriter-content::before,
