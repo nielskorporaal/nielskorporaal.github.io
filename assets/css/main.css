@@ -2335,7 +2335,7 @@ input[type="radio"] + label:before {
 }
 
 .image:before {
-  background: url("images/overlay.png");
+  /* background: url("images/overlay.png"); */
   content: "";
   display: block;
   height: 100%;
@@ -2373,12 +2373,15 @@ input[type="radio"] + label:before {
 
 .image.fit {
   display: block;
-  margin: 0 0 2em 0;
+  margin: 2em auto;
   width: 100%;
+  max-width: 200px;
+  max-height: 300px;
 }
 
 .image.fit img {
   width: 100%;
+  border-radius: 5px;
 }
 
 /* List */
@@ -2889,10 +2892,24 @@ button:disabled,
   text-indent: 4em;
   white-space: nowrap;
   width: 4em;
+  animation: bounce 800ms ease infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 
 .main .goto-next:hover {
   background-color: rgba(144, 144, 144, 0.15);
+  animation: paused;
 }
 
 /* Header */
@@ -3156,7 +3173,7 @@ button:disabled,
 
   html,
   body {
-    min-width: 280px;
+    min-width: 100%;
   }
 
   /* List */
@@ -3285,31 +3302,36 @@ button:disabled,
   --bg-color: #313a3d;
   --typewriter-speed: 4.2s;
   --typewriter-speed-slower: 5.8s;
+  --delay: 1s;
+  --typewriter-speed-delay: 6.2s;
+  --typewriter-speed-slower-delay: 7.8s;
 }
 
 .typewriter-content-42::before {
   background: var(--bg-color);
-  animation: typewriter var(--typewriter-speed) steps(42) forwards;
+  animation: typewriter var(--typewriter-speed) steps(42) var(--delay) forwards;
 }
 
 .typewriter-content-58::before {
   background: var(--bg-color);
-  animation: typewriter var(--typewriter-speed-slower) steps(58)
-    var(--typewriter-speed) forwards;
+  animation: typewriter var(--typewriter-speed-slower) steps(58) var(--delay)
+    forwards;
 }
 
 .typewriter-content-42::after {
   width: 0.1em;
   background: black;
-  animation: typewriter var(--typewriter-speed) steps(42) forwards,
-    blink 800ms steps(42) infinite;
+  animation: typewriter var(--typewriter-speed) steps(42) var(--delay) forwards,
+    blink 500ms steps(42) infinite,
+    blink 100ms steps(42) var(--typewriter-speed-delay) forwards;
 }
 .typewriter-content-58::after {
   width: 0.1em;
   background: black;
-  animation: typewriter var(--typewriter-speed-slower) steps(58)
-      var(--typewriter-speed) forwards,
-    blink 800ms steps(58) infinite;
+  animation: typewriter var(--typewriter-speed-slower) steps(58) var(--delay)
+      forwards,
+    blink 500ms steps(58) infinite,
+    blink 100ms steps(58) var(--typewriter-speed-slower-delay) forwards;
 }
 @keyframes typewriter {
   to {
