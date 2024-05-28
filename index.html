@@ -1,105 +1,25 @@
-<html lang="en" data-bs-theme="dark">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>Niels Korporaal</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/android-chrome-192x192.png" alt="logo" style="width:50px">
-                Niels Korporaal</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Theme
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#" id="theme-light">Light</a></li>
-                            <li><a class="dropdown-item" href="#" id="theme-dark">Dark</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container p-4">
-        <div class="alert alert-primary" role="alert">
-            Welcome!
-        </div>
-
-        <div class="card mb-4">
-            <div class="card-body">
-                <h5 class="card-title">Portfolio</h5>
-                <p class="card-text">Visit my portfolio page to learn more about me.</p>
-                <a href="/portfolio" class="btn btn-primary">Go to portfolio</a>
-            </div>
-        </div>
-
-        <div class="alert alert-secondary" role="alert">
-            Recent projects
-        </div>
-
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Beach Tennis Netherlands</h5>
-                <p class="card-text">Visit this website to learn more about the project I am currently working on.</p>
-                <a href="https://www.beachtennisnederland.nl" class="btn btn-primary">Go to page</a>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script>
-        document.getElementById('theme-light').addEventListener('click', function () {
-            setTheme('light');
-        });
-
-        document.getElementById('theme-dark').addEventListener('click', function () {
-            setTheme('dark');
-        });
-
-        (function () {
-            let theme = localStorage.getItem("data-bs-theme") || "dark";
-            setTheme(theme);
-        })();
-
-        function setTheme(theme) {
-            document.documentElement.setAttribute('data-bs-theme', theme);
-            localStorage.setItem("data-bs-theme", theme);
-
-            document.getElementById('theme-light').classList.remove('active');
-            document.getElementById('theme-dark').classList.remove('active');
-
-            if (theme === 'light') {
-                document.getElementById('theme-light').classList.add('active');
-            } else {
-                document.getElementById('theme-dark').classList.add('active');
-            }
+<!DOCTYPE html><html lang="en" class="dark" data-critters-container><head>
+  <meta charset="utf-8">
+  <title>Niels Korporaal</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    (async function() {
+      if (localStorage != undefined) {
+        if (localStorage.theme === 'dark') {
+          await document.documentElement.classList.add('dark')
+        } else {
+          await document.documentElement.classList.remove('dark')
         }
+      }
+    })();
+  </script>
+<style>*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}a{color:inherit;text-decoration:inherit}figure,p{margin:0}img,svg{display:block;vertical-align:middle}img{max-width:100%;height:auto}*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.absolute{position:absolute}.right-10{right:2.5rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-4{margin-bottom:1rem}.ml-6{margin-left:1.5rem}.mt-4{margin-top:1rem}.block{display:block}.flex{display:flex}.grid{display:grid}.h-6{height:1.5rem}.h-8{height:2rem}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-6{width:1.5rem}.w-fit{width:fit-content}.w-full{width:100%}.min-w-32{min-width:8rem}.max-w-\[700px\]{max-width:700px}.max-w-screen-xl{max-width:1280px}.flex-grow{flex-grow:1}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.gap-4{gap:1rem}.space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse: 0;margin-right:calc(.75rem * var(--tw-space-x-reverse));margin-left:calc(.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse: 0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.rounded{border-radius:.25rem}.border{border-width:1px}.border-t{border-top-width:1px}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.p-10{padding:2.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-slate-700{--tw-text-opacity: 1;color:rgb(51 65 85 / var(--tw-text-opacity))}.text-teal-700{--tw-text-opacity: 1;color:rgb(15 118 110 / var(--tw-text-opacity))}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.opacity-90{opacity:.9}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.hover\:rotate-6:hover{--tw-rotate: 6deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:cursor-pointer:hover{cursor:pointer}.hover\:text-gray-500:hover{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.hover\:shadow-xl:hover{--tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);--tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}@media (min-width: 640px){.sm\:mb-0{margin-bottom:0}.sm\:flex{display:flex}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:text-center{text-align:center}}@media (min-width: 768px){.md\:mb-0{margin-bottom:0}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:py-8{padding-top:2rem;padding-bottom:2rem}}.dark\:border-none:where(.dark,.dark *){border-style:none}.dark\:border-slate-700:where(.dark,.dark *){--tw-border-opacity: 1;border-color:rgb(51 65 85 / var(--tw-border-opacity))}.dark\:border-slate-800:where(.dark,.dark *){--tw-border-opacity: 1;border-color:rgb(30 41 59 / var(--tw-border-opacity))}.dark\:bg-slate-800:where(.dark,.dark *){--tw-bg-opacity: 1;background-color:rgb(30 41 59 / var(--tw-bg-opacity))}.dark\:bg-slate-900:where(.dark,.dark *){--tw-bg-opacity: 1;background-color:rgb(15 23 42 / var(--tw-bg-opacity))}.dark\:text-gray-300:where(.dark,.dark *){--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.dark\:text-gray-400:where(.dark,.dark *){--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-slate-800:where(.dark,.dark *){--tw-text-opacity: 1;color:rgb(30 41 59 / var(--tw-text-opacity))}.dark\:hover\:bg-slate-600:hover:where(.dark,.dark *){--tw-bg-opacity: 1;background-color:rgb(71 85 105 / var(--tw-bg-opacity))}
+</style><link rel="stylesheet" href="styles-ZQP53LD3.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-ZQP53LD3.css"></noscript></head>
 
-    </script>
-</body>
+<body class="bg-white dark:bg-slate-900"><!--nghm-->
+  <app-root ng-version="17.3.9" ngh="2" ng-server-context="ssg"><div class="min-h-screen flex flex-col"><app-nav ngh="0"><nav class="w-full p-4 bg-white border dark:bg-slate-800 dark:border-slate-800"><div class="flex items-center space-x-4"><a href="/"><img src="/assets/android-chrome-192x192.png" alt="logo" class="w-12 opacity-90"></a><a href="/"><span class="text-xl dark:text-gray-300 text-slate-700">Niels Korporaal</span></a><figure class="absolute right-10 hover:cursor-pointer"><!----><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg><!----></figure></div></nav></app-nav><main class="flex-grow"><router-outlet></router-outlet><app-home ngh="1"><div class="dark:text-gray-400 flex flex-col items-center justify-center"><div class="max-w-[700px]"><div class="p-10"><p class="text-l">Hello! I am a <span class="text-teal-700">Software Consultant</span> who enjoys creating, tinkering and developing smart technical solutions.</p></div></div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"><a routerlink="about" class="min-w-32 flex flex-col items-center hover:shadow-xl hover:rotate-6 transition-all dark:hover:bg-slate-600 hover:cursor-pointer w-fit p-6 dark:bg-slate-800 rounded" href="/about"><img src="assets/3d-about-me.png" alt class="w-12"><p>About me</p></a><a routerlink="tech" class="min-w-32 flex flex-col items-center hover:shadow-xl hover:rotate-6 transition-all dark:hover:bg-slate-600 hover:cursor-pointer w-fit p-6 dark:bg-slate-800 rounded" href="/tech"><img src="assets/3d-tech.png" alt class="w-12"><p>Tech</p></a><a routerlink="projects" class="min-w-32 flex flex-col items-center hover:shadow-xl hover:rotate-6 transition-all dark:hover:bg-slate-600 hover:cursor-pointer w-fit p-6 dark:bg-slate-800 rounded" href="/projects"><img src="assets/3d-projects.png" alt class="w-12"><p>Projects</p></a></div></div></app-home><!----></main><app-footer ngh="1"><footer class="bg-white border-t dark:border-none shadow dark:bg-slate-800 mt-4"><div class="w-full max-w-screen-xl mx-auto p-4 md:py-8"><div class="sm:flex sm:items-center sm:justify-between"><a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"><img src="assets/android-chrome-500x500-transparant.png" alt="Niels Korporaal Logo" class="h-8 border dark:border-slate-700 rounded"><p class="text-white dark:text-slate-800"> Niels Korporaal </p></a><div class="flex mb-4 md:mb-0"><a href="https://github.com/nielskorporaal" class="ml-6 text-gray-400 hover:text-gray-500"><span class="sr-only">GitHub</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg></a><a href="https://linkedin.com/in/niels-korporaal-7a0b42165" class="ml-6 text-gray-400 hover:text-gray-500"><span class="sr-only">LinkedIn</span><svg fill="currentColor" viewBox="0 0 24 24" class="h-6 w-6"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg></a></div><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 All rights reserved</span></div></div></footer></app-footer></div></app-root>
+<script src="polyfills-A7MJM4D4.js" type="module"></script><script src="main-KH5D5JLC.js" type="module"></script>
 
-</html>
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"8":"t0","9":"t1"},"c":{"8":[],"9":[{"i":"t1","r":1}]}},{},{"c":{"3":[{"i":"c1350488120","r":1}]}}]}</script></body></html>
